@@ -13,6 +13,9 @@ var userIsRegistered = false;
 function App() {
   return (
     <div className="container">{userIsRegistered ? <Login /> : <Form />}</div>
+    <div className="container">
+      <Form isRegistered={userIsRegistered} />
+    </div>
   );
 }
 

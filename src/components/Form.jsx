@@ -7,12 +7,17 @@ import React from "react";
 //Don't show it if userIsRegistered is true.
 
 function Form() {
+function Form(props) {
   return (
     <form className="form">
       <input type="text" placeholder="Username" />
       <input type="password" placeholder="Password" />
-      <input type="password" placeholder="Confirm Password" />
-      <button type="submit">Register</button>
+      {props.userIsRegistered && (
+        <input type="password" placeholder="Confirm Password" />
+      )}
+      <button type="submit">
+        {props.userIsRegistered ? "Register" : "Login"}
+      </button>
     </form>
   );
 }
