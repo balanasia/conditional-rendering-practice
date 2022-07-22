@@ -1,6 +1,4 @@
 import React from "react";
-import Form from "./Form";
-import Login from "./Login";
 
 //Challenge: Without moving the userIsRegistered variable,
 //1. Show Login as the button text if userIsRegistered is true.
@@ -8,15 +6,14 @@ import Login from "./Login";
 //2. Only show the Confirm Password input if userIsRegistered is false.
 //Don't show it if userIsRegistered is true.
 
-var userIsRegistered = false;
-
-function App() {
+function Login() {
   return (
-    <div className="container">{userIsRegistered ? <Login /> : <Form />}</div>
-    <div className="container">
-      <Form isRegistered={userIsRegistered} />
-    </div>
+    <form className="form">
+      <input type="text" placeholder="Username" />
+      <input type="password" placeholder="Password" />
+      <button type="submit">Login</button>
+    </form>
   );
 }
 
-export default App;
+export default Login;

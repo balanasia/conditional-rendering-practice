@@ -6,6 +6,7 @@ import React from "react";
 //2. Only show the Confirm Password input if userIsRegistered is false.
 //Don't show it if userIsRegistered is true.
 
+function Form() {
 function Form(props) {
   return (
     <form className="form">
